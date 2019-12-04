@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <variable
+            name="mealViewModel"
+            type="com.adjoe.task.viewmodel.AlbumsViewModel" />
+    </data>
+
+<!--    android:onClick="@{() -> mealViewModel.onItemClick(position)}"-->
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/meal_calories"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textStyle="bold"
+                tools:text="@{String.valueOf(mealViewModel.getMealAt(position).id)}" />
+
+            <TextView
+                android:id="@+id/meal_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                tools:text="@{mealViewModel.getMealAt(position).title}" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/meal_dateTime"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                tools:text="@{mealViewModel.getMealAt(position).dateAndTime}" />-->
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>
