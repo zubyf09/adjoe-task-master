@@ -1,4 +1,4 @@
-# Adjoe Task
+# Programming Task
 
 Please write Java code (no Kotlin). You are allowed to use libraries unless stated otherwise in the description of the task. The app should be able to run on every device from Android 5.0 on.
 1. Native android:
